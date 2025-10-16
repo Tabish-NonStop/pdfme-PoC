@@ -50,7 +50,7 @@ async function main() {
     let fixedSchemas = processSchemaFields(templateData.schemas[0]);
     const plugins = getPluginsForTemplate(fixedSchemas);
 
-    const basePdfPath = "./scripts/assets/basePdfTemplate.pdf";
+    const basePdfPath = "./scripts/assets/basePdfTemplate.pdf" || BLANK_A4_PDF;
     const basePdfBuffer = fs.readFileSync(basePdfPath);
 
     const template = { basePdf: basePdfBuffer, schemas: [fixedSchemas] };

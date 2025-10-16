@@ -14,12 +14,19 @@ import java.nio.charset.StandardCharsets;
 @Service
 public class pdfmeService {
 
+    /**
+     *
+     * @return "Ok" if the application is up and running
+     */
     public String status() {
         return "Ok";
     }
 
+
+
     public ResponseEntity<StreamingResponseBody> generatePdfFromTemplate(String templateJson) throws IOException {
         // 1. Start the Node.js process
+
         ProcessBuilder pb = new ProcessBuilder("node", "scripts/index.js");
         pb.redirectError(ProcessBuilder.Redirect.PIPE);
         Process process = pb.start();
