@@ -42,6 +42,7 @@ function processSchemaFields(schemaList) {
 }
 
 async function main() {
+    console.log("Starting")
     const inputChunks = [];
     for await (const chunk of process.stdin) inputChunks.push(chunk);
     const inputStr = Buffer.concat(inputChunks).toString();
@@ -65,10 +66,12 @@ async function main() {
         plugins,
     });
 
+
     // Output PDF directly to stdout
     process.stdout.write(pdfBuffer);
-}
 
+    console.log(inputData);
+}
 main().catch(err => {
     process.exit(1);
 });
