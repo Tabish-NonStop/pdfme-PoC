@@ -42,7 +42,6 @@ function processSchemaFields(schemaList) {
 }
 
 async function main() {
-    console.log("Starting")
     const inputChunks = [];
     for await (const chunk of process.stdin) inputChunks.push(chunk);
     const inputStr = Buffer.concat(inputChunks).toString();

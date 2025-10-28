@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@pdfme/common": "^5.4.6",
+    "@pdfme/generator": "^5.4.6",
+    "@pdfme/schemas": "^5.4.6"
+  }
+}

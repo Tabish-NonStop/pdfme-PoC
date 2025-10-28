@@ -49,5 +49,3 @@ src/main/resources
 .gitattributes
 mvnw
 mvnw.cmd
-package-lock.json
-package.json

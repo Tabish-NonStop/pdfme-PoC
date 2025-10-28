@@ -1,5 +1,6 @@
 package com.nonstop.pdfme.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.http.ContentDisposition;
 import org.springframework.http.HttpHeaders;
